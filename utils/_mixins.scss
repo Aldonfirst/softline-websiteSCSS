@@ -1,0 +1,27 @@
+@import 'variables';
+
+
+@mixin flex-c-sb-wr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+
+}
+
+//для кнопок на мобилке в gallery
+@mixin gallery-navigation-btn {
+  position: absolute;
+  background-color: transparent;
+  top: 25%;
+  font-size: 34px;
+  height: 160px;
+  width: 100px;
+  opacity: 0.5;
+  margin: 0;
+}

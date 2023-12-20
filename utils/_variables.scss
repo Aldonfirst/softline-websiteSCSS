@@ -1,0 +1,26 @@
+//шрифты
+$ff-400: 'ProximaNovaCond-Regular', sans-serif;
+$ff-600: 'ProximaNovaCond-Semibold', sans-serif;
+
+//цвета
+$vinous-col: #A30C33;
+$text-gray:#444;
+$text-white:#fff;
+$red-bg:#B01736;
+$bg-overlay:#2D3653;
+
+// фонs банеров
+$bg-banner: '../img/bg-city.png';
+$bg-mission: '../img/logo/Left-pattern-missions.svg';
+
+//иконки секции benefits
+$icons: (
+    benefits__item-1: '../img/logo/dms.svg',
+    benefits__item-2: '../img/logo/cake.svg',
+    benefits__item-3: '../img/logo/phone.svg',
+    benefits__item-4: '../img/logo/weight.svg',
+    benefits__item-5: '../img/logo/handshake.svg',
+    benefits__item-6: '../img/logo/equirment.svg',
+    benefits__item-7: '../img/logo/dms.svg',
+    benefits__item-8: '../img/logo/ipoteka.svg',
+);

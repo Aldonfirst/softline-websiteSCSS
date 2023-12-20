@@ -1,0 +1,37 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../utils/media";
+.header {
+    padding: 0 70px;
+    border: 1px solid #D9D9D9;
+   @include flex-c-sb-wr;
+
+    &__logo {
+        max-width: 125px;
+        max-height: 25px;
+        padding: 16px 0;
+        cursor: pointer;
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 20px;
+        font-size: 18px;
+        line-height: 20px;
+        padding: 16px 0;
+    }
+}
+@include mobile { 
+    .header {
+    padding: 0 5px;
+    &__nav {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        font-size: calc(14px - 0.85px); //пришлось убавить но на макете 14px
+        gap: 10px;
+        line-height: 16px;
+    }
+    }
+}

@@ -1,0 +1,71 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../utils/media";
+
+.gallery {
+  @include flex-c-sb-wr;
+    margin: 70px;
+
+    &__title {
+text-align: start;
+    }
+
+    &__slider {
+        display: flex;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        width: 100%;
+        margin-top: clamp(15px, 3vw, 58px);
+
+        img {
+            width: 100%;
+            scroll-snap-align: center;
+        }
+    }
+
+    &__prev,
+    &__next {
+        width: 56px;
+        height: 56px;
+        font-size: 18px;
+        background-color: #F0F0F0;
+        border-radius: 50%;
+        color:$vinous-col;
+        border: none;
+        cursor: pointer;
+
+    }
+
+    &__prev {
+        margin-right: 10px;
+    }
+
+    &__next {
+        margin-left: 10px;
+
+    }
+}
+
+@include tablet{
+    .gallery {
+          margin: 5px;
+          position: relative;
+    }
+
+}
+
+@include big-mobile{
+    .gallery__prev {
+        @include gallery-navigation-btn;
+        left: 5px;
+        text-align: left;
+      }
+      
+      // Применяем миксин к .gallery__next
+      .gallery__next {
+        @include gallery-navigation-btn;
+        right: 5px;
+        text-align: right;
+      }
+}

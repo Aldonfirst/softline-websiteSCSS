@@ -1,0 +1,50 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../utils/media";
+.banner {
+    max-width: 100%;
+    min-height: 600px;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url($bg-banner);
+    background-position: center;
+    background-size: cover;
+
+    &__title {
+        text-align: start;
+        width: 70%;
+    }
+
+    &__link {
+        border-radius: 8px;
+        background-color:$red-bg;
+        max-width: 110px;
+        font-size: 18px;
+        min-height: 56px;
+        padding: 18px 28px;
+        color:$text-white;
+        margin-top: 60px;
+        line-height: 20px;
+    }
+}
+
+
+@include big-mobile{
+    .banner{
+        padding:0 5px;
+        min-height: 300px;
+    
+    &__title {
+        width: 100%;
+    }
+    &__link {
+        min-height: 32px;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: normal;
+        padding: 4px 28px;
+    }
+}
+}

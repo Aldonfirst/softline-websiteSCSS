@@ -1,0 +1,77 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../utils/media";
+.about {
+    padding: 100px 110px;
+
+    &__info {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        align-items: center;
+        margin-bottom: 100px;
+
+        b {
+            color: $vinous-col;
+        }
+    }
+}
+
+.numbers {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 80px 180px;
+        justify-content: space-evenly;
+        text-align: center;
+
+        li {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            list-style: none;
+
+            &::before {
+                color: $vinous-col;
+                content: attr(data-number);
+                font-size:clamp(40px, 6vw, 80px);
+            
+                font-style: normal;
+                line-height: 80%;
+            }
+
+            p {
+                max-width: 240px;
+            }
+        }
+    }
+}
+@include tablet{
+    .about{
+        padding: 60px 5px;
+    }
+    .numbers__list{
+        gap: 40px 60px;
+        font-size: 16px;
+        justify-content: center;
+    }
+}
+@include mobile{
+    
+.about__info{
+    font-size: 16px;
+    margin-bottom: 50px;
+    
+}
+.numbers__list{
+    display: flex;
+  gap: 8px 8px;
+  li {
+    max-width: 136px;
+  }
+  
+}
+
+}

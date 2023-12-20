@@ -1,0 +1,33 @@
+@import '../utils/_variables.scss';
+@import "../utils/media";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page{
+    max-width: 1250px;
+    margin: 0 auto;
+    color:$text-gray;
+    font-style: normal;
+    font-weight: 600;
+    font-family: $ff-600;
+
+}
+
+h2 {
+    color:$text-gray;
+    text-align: center;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    font-family: $ff-600;
+  }
+  
+  @include tablet{
+    h2{
+        font-size: clamp(28px, 7vw, 56px);
+    }
+  }
